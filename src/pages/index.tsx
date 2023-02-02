@@ -1,4 +1,6 @@
 import Atmosphere from "@/components/Atmosphere";
+import Clouds from "@/components/Clouds";
+
 import Globe from "@/components/Globe";
 import Lights from "@/components/Lights";
 import { OrbitControls } from "@react-three/drei";
@@ -19,7 +21,8 @@ export default function Home() {
         <Suspense fallback={<h1>Loading...</h1>}>
           <Canvas shadows>
             <Globe />
-            <Atmosphere />
+            {/* <Clouds /> */}
+            {/* <Atmosphere /> */}
             <OrbitControls />
             <Lights />
           </Canvas>

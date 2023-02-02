@@ -7,17 +7,17 @@ const Globe = () => {
   const globe = useRef<Mesh>(null!);
 
   const globeTexture = useLoader(TextureLoader, "/worldmap.jpg");
-  const displacementMap = useLoader(TextureLoader, "/heightmap.png");
-  const normalMap = useLoader(TextureLoader, "/NormalMap.png");
+  const cloudsTexture = useLoader(TextureLoader, "/clouds.jpg");
+  const lightsTexture = useLoader(TextureLoader, "/lights.jpg");
 
   const uniforms = {
     globeTexture: { value: globeTexture },
-    displacementMap: { value: displacementMap },
-    normalMap: { value: normalMap },
+    cloudsTexture: { value: cloudsTexture },
+    lightsTexture: { value: lightsTexture },
   };
 
   useFrame(() => {
-    // globe.current.rotation.y += 0.005;
+    globe.current.rotation.y -= 0.0005;
   });
 
   useEffect(() => {
