@@ -6,16 +6,26 @@ const globalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     color: white;
+    letter-spacing: 0.125em;
   }
 
   body {
+    width: 100vw;
+    height: 100vh;
     background-color: black;
   }
 
-
-  canvas {
+  .three-canvas {
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
     width: 100vw !important;
     height: 100vh !important;
+    transform: translate(-50%, -50%);
+
+    canvas {
+      transform: rotateZ(20deg);
+    }
   }
 `;
 
