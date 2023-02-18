@@ -26,7 +26,7 @@ export default function Home() {
       <Suspense fallback={<Loading>Loading...</Loading>}>
         <Canvas shadows className="three-canvas">
           <Globe />
-          <OrbitControls enableZoom={false} />
+          <OrbitControls enableZoom={false} enablePan={false} />
         </Canvas>
       </Suspense>
     </>
